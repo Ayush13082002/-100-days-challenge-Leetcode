@@ -1,0 +1,10 @@
+Approach
+
+Sort the input array nums in ascending order.
+Traverse the sorted array to remove duplicates and count unique elements in uniqueLen.
+Initialize ans to the length of the input array, representing the maximum operations initially.
+Iterate over unique elements using an outer loop.
+Use an inner while loop with two pointers to find subarrays where the difference between the maximum and minimum element is within the array's length.
+Calculate the number of operations needed to make all elements distinct within each subarray.
+Update ans with the minimum operations found among all subarrays.
+Return the minimum operations as the final result.
