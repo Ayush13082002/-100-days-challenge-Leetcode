@@ -1,0 +1,20 @@
+Approach
+The problem can be tackled with dynamic programming, where we try to build the solution incrementally. We can break down the problem into sub-problems where we consider smaller arrays and try to determine the number of valid arrays we can form given a certain cost and maximum value.
+
+We use the following states:
+
+i: the length of the array.
+maxNum: the maximum number in the array.
+cost: the cost of the array.
+We define dp[i][maxNum][cost] as the number of arrays of length i with a maximum value of maxNum and a cost of cost. To compute this, we consider two cases:
+
+The last number added to the array isn't a new maximum. In this case, it can be any number from 1 to maxNum, and the cost remains unchanged.
+The last number added is a new maximum. Here, the previous maximum could be any number from 1 to maxNum - 1, and the cost decreases by 1 since we've added a new maximum.
+However, summing over possible maximums for each state would be inefficient. To accelerate this, we introduce a prefix sum array that keeps track of the sum of valid arrays for a given cost up to the current maximum.
+
+Complexity
+Time complexity: O(n×m×k)O(n \times m \times k)O(n×m×k)
+The main loop iterates n times. For each iteration, we consider m possible maximum values and k possible costs, making the time complexity cubic.
+
+Space complexity: O(m×k)O(m \times k)O(m×k)
+We use two 2D arrays, dp and prefix, each of size m×km \times km×k, and two other arrays, prevDp and prevPrefix, for storing the previous state. Hence, the space complexity is quadratic.
