@@ -1,0 +1,17 @@
+Approach
+Dynamic Programming Approach:
+
+We can use a 2D array dp where dp[i][j] represents the maximum dot product between the first i elements of nums1 and the first j elements of nums2.
+If we decide to pick the elements nums1[i] and nums2[j], the dot product added to the result is nums1[i] * nums2[j].
+We can also decide not to pick any element from nums1 or nums2, so we will consider dp[i-1][j] and dp[i][j-1].
+The recurrence relation is:
+dp[i][j]=max⁡(dp[i−1][j],dp[i][j−1],nums1[i−1]×nums2[j−1]+max⁡(0,dp[i−1][j−1])dp[i][j] = \max(dp[i-1][j], dp[i][j-1], nums1[i-1] \times nums2[j-1] + \max(0, dp[i-1][j-1])dp[i][j]=max(dp[i−1][j],dp[i][j−1],nums1[i−1]×nums2[j−1]+max(0,dp[i−1][j−1])
+Space Optimized Approach:
+
+Instead of using a 2D array, we observe that we only need values from the current and previous row to compute the next row. Thus, two 1D arrays (current and previous) suffice.
+At the end of processing each row, we swap the two arrays, thus making the current array act as the previous array for the next iteration.
+Complexity
+Time complexity: O(m×n)O(m \times n)O(m×n) - We have to fill up the dp matrix which is of size m×nm \times nm×n.
+Space complexity:
+For the DP approach: O(m×n)O(m \times n)O(m×n) - The size of the dp matrix.
+For the Optimized approach: O(n)O(n)O(n) - We are using two 1D arrays.
