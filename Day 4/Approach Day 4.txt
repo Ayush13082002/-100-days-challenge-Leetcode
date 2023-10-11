@@ -1,0 +1,15 @@
+Approach:-
+
+1. Data Preparation:
+Extract the start and end times of each flower from the 'flowers' array.
+Sort the start and end times separately. Sorting these times will help us efficiently determine how many flowers are in full bloom at a given time.
+2. Iterate Through People's Arrival Times:
+For each person's arrival time 't' in the 'people' array, perform the following steps:
+3. Use Binary Search for Start Times:
+Use bisect_left to find the position in the sorted 'start' list where 't' would be inserted. This position represents the number of flowers that have started blooming before or at the time 't'.
+4. Use Binary Search for End Times:
+Use bisect_right to find the position in the sorted 'end' list where 't' would be inserted. This position represents the number of flowers that have finished blooming before or at the time 't'.
+5. Calculate the Count of Full Bloom Flowers:
+The difference between the positions found in step 3 and step 4 gives the count of flowers that are in full bloom when the person arrives at time 't'.
+6. Collect and Return Results:
+Collect the results for all people and store them in a list.
