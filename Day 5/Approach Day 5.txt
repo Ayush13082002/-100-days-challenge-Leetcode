@@ -1,0 +1,26 @@
+Approaches
+(Also explained in the code)
+
+Approach  
+Save the length of the mountain array.
+
+Find the index of the peak element by using binary search:
+
+Initialize s (start) to 1 and e (end) to n - 2 where n is the length of the array.
+While s is not equal to e, calculate the midpoint mid.
+If mountainArr.get(mid) is less than mountainArr.get(mid + 1), update s to mid + 1, indicating that the peak lies to the right.
+Otherwise, update e to mid, indicating that the peak lies to the left.
+The final value of s represents the index of the peak.
+Search for the target in the strictly increasing part of the array:
+
+Initialize s to 0 and e to the peak index.
+While s is not equal to e, calculate the midpoint mid.
+If mountainArr.get(mid) is less than the target, update s to mid + 1.
+Otherwise, update e to mid.
+If the target is found at s, return s.
+Search for the target in the strictly decreasing part of the array:
+
+Initialize s to peakIndex + 1 and e to n - 1.
+Similar to step 3, perform binary search.
+If the target is found at s, return s.
+If the target is not found in either part, return -1 to indicate that the target is not present in the mountain array.
