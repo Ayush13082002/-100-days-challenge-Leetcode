@@ -1,0 +1,8 @@
+Approach 
+In this approach, you start from the bottom of the staircase and work your way up, computing and storing the minimum cost to reach each step. At each step, you have two choices: either climb one step from the previous step or two steps from the step before that. You choose the option that minimizes the cost.
+ 
+1. Initialize an array dp of length n + 1, where n is the length of the cost array. Each element dp[i] will store the minimum cost to reach the i-th step.
+2. Start iterating from the 2nd step (index 2) to the n-th step.
+3. For each step i, calculate the cost of reaching it from the previous step (i - 1) and from two steps back (i - 2).
+4. Update dp[i] with the minimum of these two costs.
+5. Return dp[n], which represents the minimum cost to reach the top of the staircase.
