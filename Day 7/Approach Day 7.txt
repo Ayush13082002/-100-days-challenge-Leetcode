@@ -1,0 +1,21 @@
+Approach 🚀
+To solve this problem, the provided code uses dynamic programming with memoization.
+1. Preprocessing:
+Create a list postfix_times to store the cumulative time taken to paint the walls starting from the last wall to the first. This list will be used to quickly calculate the remaining time needed to paint the remaining walls.
+2. Dynamic Programming with Memoization:
+Define a recursive function dp(index, time_painted) that calculates the minimum cost to paint the remaining walls starting from index index with time_painted time units available. The function returns the minimum cost required to paint the remaining walls under these constraints.
+
+Base Cases:
+If index is equal to the length of the cost array, it means all walls have been painted, so the cost is 0.
+If time_painted is greater than or equal to the number of remaining walls, it means that the free painter can be used to paint the remaining walls at no cost. Return 0 in this case.
+If the remaining time (time_painted) plus the cumulative time to paint the remaining walls (postfix_times[index]) is negative, it's not possible to paint the remaining walls in time. Return infinity (represented as float("inf")) in this case.
+Memoization: The algorithm uses a dictionary visited to memoize the results of subproblems to avoid redundant calculations.
+
+Recursion: The function recursively calculates the minimum cost by considering two options:
+
+Paint the current wall using the paid painter and move to the next wall with decreased available time and increased cost.
+Skip the current wall and move to the next wall with the same available time.
+The result is stored in the visited dictionary for the current index and time_painted.
+
+3. Returning the Result:
+Call the dp function with initial values index=0 and time_painted=0 (no time consumed initially) and return the result.
