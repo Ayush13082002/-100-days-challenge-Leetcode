@@ -1,0 +1,18 @@
+Approach 
+
+Initialization:
+
+Calculate the maximum position (max_position) based on the minimum of half the steps plus one and the array length. This restricts the position within the array.
+Initialize arrays cur_ways and next_ways of length (max_position + 2) and fill them with zeros. These arrays store the number of ways to reach each position.
+Set cur_ways[1] to 1 since there's one way to start at position 1.
+Define a variable mod to store the modulo value (10^9 + 7) for overflow prevention.
+Dynamic Programming:
+
+Iterate through the steps, decrementing the count with each iteration.
+For each step:
+Iterate through each position from 1 to max_position.
+Update next_ways[pos] using the rule: the sum of the number of ways from the previous step at the current position, the previous position, and the next position, all modulo mod to prevent overflow.
+Swap cur_ways and next_ways to update the current ways for the next step.
+Return Result:
+
+After the iterations, return the number of ways to reach the first position (cur_ways[1]) after the specified number of steps. This represents the total number of ways to reach the starting position.
