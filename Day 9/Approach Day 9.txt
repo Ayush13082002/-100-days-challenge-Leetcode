@@ -1,0 +1,19 @@
+Approach 
+Each row of Pascal's Triangle can be represented using the sequence of combinations:
+C(r,0),C(r,1),C(r,2),…,C(r,r)C(r, 0), C(r, 1), C(r, 2), \ldots, C(r, r)C(r,0),C(r,1),C(r,2),…,C(r,r)
+where C(n,k)C(n, k)C(n,k) is the binomial coefficient, defined as:
+C(n,k)=n!k!(n−k)!C(n, k) = \frac{n!}{k!(n-k)!}C(n,k)= 
+k!(n−k)!
+n!
+​
+ 
+
+The row's first element is always 1. Given the previous element in the row (prev), the next element can be calculated using:
+next_val=prev×rowIndex−k+1k\text{next\_val} = \text{prev} \times \frac{\text{rowIndex} - k + 1}{k}next_val=prev× 
+k
+rowIndex−k+1
+​
+ 
+This formula is derived from the relationship between consecutive binomial coefficients in the same row.
+
+Iterating from k = 1 to k = rowIndex, we can directly generate the elements for the desired row without building the entire triangle.
