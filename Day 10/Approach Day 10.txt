@@ -1,0 +1,13 @@
+Approach :-
+In-degree Calculation:
+We initialize an array indegree to keep track of the in-degree of each node.
+We iterate through leftChild and rightChild arrays, incrementing the in-degree of the corresponding nodes.
+Root Identification:
+We then iterate through the indegree array to identify the root node (a node with an in-degree of 0).
+If we find more than one node with an in-degree of 0, or if we do not find any such node, we return False since the nodes do not form a valid binary tree.
+Breadth-First Search (BFS):
+Having identified the root, we perform a BFS traversal starting from the root to visit all nodes in the tree.
+We use a queue to manage the BFS traversal, and a visited array to keep track of which nodes have been visited.
+If we encounter a node that has already been visited, we return False as this indicates a cycle in the graph, which violates the tree property.
+Validation:
+Finally, we validate that all nodes have been visited by comparing the sum of the visited array to n. If they are equal, it means all nodes were reachable from the root, and we return True. Otherwise, we return False.
