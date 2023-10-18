@@ -1,0 +1,11 @@
+Approach
+1. Create a graph to represent the prerequisites using an adjacency list.
+2. Create a memoization table (an array) to store the minimum time needed to complete each course.
+3. Define a recursive function to calculate the minimum time to complete a course:
+a. If the course has already been calculated, return its value from the memoization table.
+b. If the course has no prerequisites, its time is simply its own duration.
+c. Otherwise, calculate the time to complete this course as the maximum time among its prerequisites plus its own duration.
+d. Store this calculated time in the memoization table and return it.
+4. Initialize a variable to keep track of the overall minimum time.
+5. For each course, calculate its minimum time using the recursive function and update the overall minimum time if necessary.
+6. The overall minimum time is the answer.
