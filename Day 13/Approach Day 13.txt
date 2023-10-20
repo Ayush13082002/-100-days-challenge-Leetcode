@@ -1,0 +1,6 @@
+Approach :
+ Recursive Flattening
+Recursive Exploration of Nested List: To navigate the nested list, we must access each integer sequentially. This can be achieved by recursively examining each NestedInteger:
+If it's an integer, we simply add it to our result.
+If it's a list, we recursively flatten the list and merge our result with this newly flattened list.
+Linear Iteration: Having flattened the nested list, iterating over it is a breeze. We maintain an index to trace our current position. The next function will fetch the current integer and move the index ahead, while hasNext will verify if any more integers are left in the flattened list.
