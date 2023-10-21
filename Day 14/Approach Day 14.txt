@@ -1,0 +1,5 @@
+Approach :-
+
+Sliding Window with a Deque: To keep track of the maximum sum within a window of size k, we use a deque. The deque stores indices and is maintained in a decreasing order of sums. The front of the deque always has the index with the maximum sum in the last k positions.
+Dynamic Programming: For every position i , we check the front of the deque to get the maximum sum within the last kpositions. We then add this sum (if it's positive) to the current element to compute the sum for the current position.
+Deque Maintenance: After computing the sum for the current position, we update the deque. Indices that are out of the k window are removed from the front. Indices with sums smaller than the current sum are removed from the back. This ensures that the deque remains in decreasing order of sums.
