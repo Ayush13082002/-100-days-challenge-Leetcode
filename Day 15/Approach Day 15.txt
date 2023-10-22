@@ -1,0 +1,19 @@
+Approach
+Initialization:
+
+We kick off by positioning the left and right pointers at index k.
+The variable min_val is promptly initialized with the element present at index k.
+Simultaneously, max_score is set to the value of min_val. This essentially represents the score of the subarray [k, k], a window with only one element, the k-th element.
+Expansion:
+
+During every loop iteration, we're faced with a decision: Should we shift the left pointer to the left, or should we move the right pointer to the right?
+This decision hinges on two factors:
+Ensuring we haven't reached the boundaries of the array.
+Comparing the values adjacent to the current left and right pointers to decide the more promising direction for expansion.
+Score Calculation:
+
+Post each expansion step, we refresh the value of min_val. This ensures it always mirrors the smallest element within our current window.
+Subsequent to this update, we compute the score affiliated with the current window. This is straightforward and is the product of min_val and the current window's length. If this newly calculated score surpasses our existing max_score, we update max_score.
+Termination:
+
+The expansion loop is designed to persevere until it's impossible to further extend the window. This state is reached when the left pointer touches the start of the array or the right pointer hits the array's end.
