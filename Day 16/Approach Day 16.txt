@@ -1,0 +1,8 @@
+Approach:
+
+Brute Force
+Start an iteration from i equal to 0 to 15, representing powers of 4 from 4^0 to 4^15 since the maximum value that int can hold is 4^(15.5).
+Calculate the powerOfFour by raising 4 to the power of i.
+if powerOfFour is equal to the input integer n. If they are equal, return true because n is a power of four.
+If powerOfFour becomes greater than n, there's no need to continue the loop, so return false.
+If none of the powers of 4 match n during the loop, return false to indicate that n is not a power of four.
