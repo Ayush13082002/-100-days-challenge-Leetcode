@@ -1,0 +1,8 @@
+Approach:
+We can use a BFS traversal with a queue to process each level.
+Start by enqueuing the root node.
+While the queue is not empty, process the nodes of the current level:
+a. For each node in the current level, update the maximum value seen so far.
+b. If the node has left and right children, enqueue them.
+After processing all nodes in a level, add the maximum value to the result list.
+Continue this process until the queue is empty, which means all levels are processed.
