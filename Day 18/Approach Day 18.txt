@@ -1,0 +1,8 @@
+Approach
+Initialize a boolean flag, areValuesSame, to track if the values of k and the first element in the row are the same.
+Calculate the total number of elements in the nth row using the formula 2^(n-1).
+Enter a loop that continues until you reach the first row (where n equals 1 and its element is 0):
+Halve the number of elements in the row by dividing n by 2.
+Check if k is in the second half of the current row by comparing it to n.
+If k is in the second half, adjust its value by subtracting new n, and toggle the value of areValuesSame (if it was true, make it false, and vice versa).
+Return 0 if the areValuesSame flag indicates that the values are the same; otherwise, return 1.
