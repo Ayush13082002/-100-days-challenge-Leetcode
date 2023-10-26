@@ -1,0 +1,37 @@
+Approach
+Sorting and Set Creation: Start by sorting the arr in ascending order. This allows us to efficiently determine when to stop considering pairs of factors (especially with our optimization). Also, create a set s from arr for O(1) lookup times.
+
+Dynamic Programming: Use a dictionary dp where each key is a number from arr and its value represents the number of binary trees with that number as the root. Initialize each number's count to 1 to account for a single-node tree.
+
+Calculating Combinations: For every number iii in arr:
+
+Check every number jjj in arr (where j≤ij \leq \sqrt{i}j≤ 
+i
+​
+  because of optimization).
+If iii is divisible by jjj and ij\frac{i}{j} 
+j
+i
+​
+  is in s:
+If ij=j\frac{i}{j} = j 
+j
+i
+​
+ =j (i.e., both factors are the same), then increment the count for iii by dp[j]×dp[j]\text{dp}[j] \times \text{dp}[j]dp[j]×dp[j].
+Otherwise, increment the count for iii by dp[j]×dp[ij]×2\text{dp}[j] \times \text{dp}[\frac{i}{j}] \times 2dp[j]×dp[ 
+j
+i
+​
+ ]×2. We multiply by 2 to account for the two possible trees (with children jjj and ij\frac{i}{j} 
+j
+i
+​
+  or ij\frac{i}{j} 
+j
+i
+​
+  and jjj).
+Final Answer: The final answer is the sum of all values in dp modulo 109+710^9 + 710 
+9
+ +7.
