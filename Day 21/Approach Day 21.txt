@@ -1,0 +1,18 @@
+Approach:- 
+Transition Matrix: First, we need to understand the transition for each vowel. We can build this based on the rules provided:
+
+'a' can only be followed by 'e'
+'e' can be followed by 'a' or 'i'
+'i' cannot be followed by another 'i'
+'o' can be followed by 'i' or 'u'
+'u' can only be followed by 'a'
+Dynamic Programming: We maintain a dynamic programming array for each vowel which will store the count of strings ending with that vowel for a particular length.
+
+For n=1n = 1n=1, all vowels have a count of 1.
+For each subsequent length, the count for each vowel is updated based on the previous counts of the other vowels.
+For example, the count of strings of length iii ending with 'a' will be equal to the count of strings of length i−1i-1i−1 ending with 'e', because 'a' can only be followed by 'e'.
+Modulo Operation: Since the answer can be large, we use modulo 109+710^9 + 710 
+9
+ +7 at each step to keep the numbers manageable.
+
+Final Answer: The final answer will be the sum of counts of all vowels for length nnn.
