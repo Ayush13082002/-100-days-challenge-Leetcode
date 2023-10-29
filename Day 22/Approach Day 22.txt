@@ -1,0 +1,7 @@
+Approach :
+Calculate the number of tests a single pig can perform within the given time window: testsPerPig = timeToTest / timeToDie.
+Initialize numPigs to keep track of the number of pigs needed, and states to keep track of the number of unique states that a single pig can represent (states start with 1 since a pig can either survive or die, so two possible states).
+Enter a loop that continues until the number of states is greater than or equal to the number of buckets.
+At each iteration, multiply the states by (testsPerPig + 1) since each pig can cover that many unique states.
+Increment the numPigs by 1.
+Once the loop ends, return the numPigs as the minimum number of pigs needed to solve the problem.
