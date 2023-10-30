@@ -1,0 +1,7 @@
+Approach
+Our approach is straightforward:
+
+Convert each number into its binary representation using the bin() function.
+Count the number of 1's using the count('1') method.
+Sort the numbers first by the count of 1's and then by the number itself.
+Python's sorted function will use the first element of the tuple for sorting and if there's a tie, it'll use the second element.
