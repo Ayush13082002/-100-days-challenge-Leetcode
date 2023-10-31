@@ -1,0 +1,4 @@
+Approach:- 
+The first observation is that the first element of the original array is equal to the first element of the prefix array. This is because there's no prior value to XOR with.
+For every subsequent element in the prefix array, we can obtain the corresponding element in the original array by XORing the current prefix value with the previous prefix value. This is derived from the properties of XOR, which allows us to 'cancel out' values, essentially 'undoing' the accumulation.
+Using this approach, we iterate through the prefix array and populate our original array.
