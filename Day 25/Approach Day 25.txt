@@ -1,0 +1,8 @@
+Approach:
+1.Define a list self.inorderr to store the values obtained during an in-order traversal of the BST.
+2. Define an inorder function that performs an in-order traversal of the BST. It appends the values to self.inorderr as it visits each node.
+3. Call the inorder function with the root of the BST to populate self.inorderr with all the values.
+4. Use collections.Counter to count the frequency of each value in self.inorderr, creating a dictionary where keys are values and values are their frequencies.
+5. Find the maximum frequency (the mode) among the counted values using max(freq.values()).
+6. Create a list comprehension that iterates through the keys (values) in freq and selects those keys where the frequency matches the maximum frequency found in step 5. This will give you all the mode(s) in the BST.
+7. Return the list of mode(s).
