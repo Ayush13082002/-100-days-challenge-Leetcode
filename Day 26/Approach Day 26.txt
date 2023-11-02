@@ -1,0 +1,26 @@
+Approach:-
+To solve the problem, we employ a post-order traversal approach. In post-order traversal, the tree is traversed in such a way that we first explore the left subtree, then the right subtree, and finally the node itself. This method is particularly suitable for this problem because, to determine the average value of a subtree rooted at a node, we need information from its left and right subtrees first.
+
+Base Case
+Our recursive function's first duty is to identify if it has reached a leaf node, i.e., a node that doesn't have children. If the node being processed is None, it indicates that it's a leaf, and as such, we return both a sum and count of 0. This is because, for non-existent children of leaf nodes, there's no value to add or count to increment.
+
+Recursive Logic
+For every node in the tree, we perform the following steps:
+
+Left Subtree Processing:
+We recursively calculate the sum and count of nodes for the left child of the current node. This gives us the total value of all nodes and the number of nodes in the left subtree.
+
+Right Subtree Processing:
+Similarly, we recursively calculate the sum and count of nodes for the right child of the current node. This provides the total value of all nodes and the number of nodes in the right subtree.
+
+Current Node's Subtree Calculation:
+
+Sum: To calculate the sum of the values in the subtree rooted at the current node, we add the node's own value to the sums from the left and right subtrees.
+Count: The count of nodes in the subtree rooted at the current node is found by adding 1 (for the current node itself) to the counts from the left and right subtrees.
+Average Comparison:
+We check if the average of the subtree rooted at the current node matches the node's value. The average is calculated by performing integer division of the sum by the count. If they match, it indicates that the node's value is indeed the average of its subtree, and we increment our result counter.
+
+Return Values:
+Finally, for the benefit of the parent node in the recursive chain, we return the current node's subtree sum and count. This ensures that as the recursion unwinds, each parent node gets the aggregate values of its children and can perform its own calculations.
+
+By following this approach, the algorithm efficiently traverses the tree, calculating and checking averages in one pass, without needing to revisit nodes or perform redundant calculations.
