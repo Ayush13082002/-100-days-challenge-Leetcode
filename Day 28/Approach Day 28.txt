@@ -1,0 +1,20 @@
+Approach :
+Variable Initialization: We start by initializing a variable time to keep track of the maximum time it takes for the last ant(s) to fall off the plank. We set it to 0 initially.
+
+Handling Ants Moving to the Left:
+
+We iterate through the positions of ants moving to the left (specified by the left array).
+For each left-moving ant, we check its position.
+If the current left-moving ant's position is greater than the previously recorded maximum time (time), we update time with the current ant's position.
+This step ensures that we keep track of the ant moving to the left that falls last.
+Handling Ants Moving to the Right:
+
+Next, we iterate through the positions of ants moving to the right (specified by the right array).
+For each right-moving ant, we calculate its position relative to the right end of the plank by subtracting its position from the total length of the plank, which is n.
+We compare this calculated position with the previously recorded maximum time (time) and update time if the calculated position is greater.
+This step ensures that we account for the ant moving to the right that falls last.
+Return Result:
+
+Finally, the time variable contains the maximum time, which represents when the last ant(s) fall off the plank, whether they are moving to the left or the right.
+We return this maximum time as the result of the function.
+The key insight here is that the last ant(s) to fall off the plank will either be the one farthest to the left among left-moving ants or the one farthest to the right among right-moving ants. By keeping track of the maximum position reached by ants from both directions, we can determine the moment when the last ant(s) fall off the plank, and this approach simplifies the problem considerably.
