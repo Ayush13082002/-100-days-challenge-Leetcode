@@ -1,0 +1,14 @@
+Approach  
+The approach to solving this problem involves several steps:
+
+Calculate Arrival Times:
+We compute the time it will take for each monster to reach the city. This is done by dividing the distance of each monster by its speed, yielding the time of arrival.
+
+Sort Arrival Times:
+Once we have the times, we sort them in ascending order. This allows us to process the monsters in the order they would reach the city.
+
+Eliminate Monsters:
+We simulate the process of eliminating monsters one by one. Starting with the monster that arrives first, we eliminate one monster per minute. During each minute, we check if the current monster has already reached the city (i.e., its arrival time is less than or equal to the time spent on previous eliminations). If so, we stop and return the number of monsters eliminated up to that point.
+
+Return Result:
+If we manage to go through all the monsters without any reaching the city, we return the total number of monsters.
