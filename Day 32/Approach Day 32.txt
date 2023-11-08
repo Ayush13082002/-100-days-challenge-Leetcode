@@ -1,0 +1,17 @@
+Approach:
+Function Signature:
+
+The isReachableAtTime function takes six integer parameters: sx (starting x-coordinate), sy (starting y-coordinate), fx (final x-coordinate), fy (final y-coordinate), and t (time).
+Calculate Differences:
+
+It calculates the absolute differences between the x-coordinates and y-coordinates of the starting and final points as xdiff and ydiff, respectively.
+Special Case Check:
+
+It checks if both xdiff and ydiff are zero (the starting and final points are the same) and if t is equal to 1. In this case, it returns false, indicating that it's not possible to reach the final point in one unit of time.
+Reachability Calculation:
+
+It calculates the minimum of xdiff and ydiff, representing the diagonal movement, and adds it to the absolute difference between xdiff and ydiff. This formula accounts for the maximum number of diagonal moves and horizontal/vertical moves needed to reach the final point.
+If the result is less than or equal to t, it returns true, indicating that it's possible to reach the final point within the given time.
+Returning a Result:
+
+If none of the conditions are met, it returns false, indicating that the final point is not reachable within the specified time.
