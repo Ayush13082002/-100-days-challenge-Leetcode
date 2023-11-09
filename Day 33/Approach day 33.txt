@@ -1,0 +1,9 @@
+Approach
+Initialize a variable res to store the result.
+Convert the input string s into a character array for easy access.
+Initialize a variable start to 0, which marks the start of a potential homogenous substring.
+Iterate through the character array.
+When a different character is encountered (c[i] != c[start]), calculate the number of homogenous substrings and add it to res. We do this by subtracting the start index from the current index (i - start) and adding the count to res. Then, update the start to the current index.
+Continue this process until you reach the end of the string.
+Calculate and add the number of homogenous substrings for the last homogenous substring.
+Return the result res modulo 10^9 + 7.
