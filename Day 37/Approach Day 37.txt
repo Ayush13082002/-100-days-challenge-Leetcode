@@ -1,0 +1,3 @@
+Approach
+Traverse every one and add current node to num.
+At leaf node add num to total sum.

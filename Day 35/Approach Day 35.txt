@@ -1,0 +1,13 @@
+Approach
+Initialize a variable ans to 0. This variable will hold the reversed bits of the input integer n.
+
+Iterate through each bit of the input integer n. The loop runs for Integer.SIZE iterations, which is typically 32 bits for most platforms, assuming you are using a 32-bit integer representation.
+
+For each iteration:
+(i) Use bitwise AND operation (n & 1) to check whether the last bit of n is set (i.e., whether it's 1 or 0).
+(ii) If the last bit is set (i.e., k > 0), then set the corresponding bit in the ans variable. This is done by using the expression (1L << (31-i)), which sets the ith bit (counting from the right, starting at 0) of ans to 1.
+Right-shift n by 1 to move to the next bit in n for the next iteration.
+
+Repeat steps 3 and 4 for all bits of n until the loop completes.
+
+After the loop, the ans variable will contain the reversed binary representation of n.
