@@ -1,0 +1,4 @@
+Approach
+The strategy involves initially detecting the vowels in the input string s and recording both the vowels and their respective positions in two distinct vectors, namely vowels_list and vowel_positions. Subsequently, the code arranges the vowels in ascending order by sorting the vowels_list vector. Following this, a new string named resultString is generated, initially mirroring the content of the input string 's'.
+
+Ultimately, the code substitutes the characters at the positions stored in the vowel_positions vector with the sorted vowels from the vowels_list vector. The resulting modified string, now containing the vowels in sorted order, is returned as the output of the function.
