@@ -1,0 +1,5 @@
+Approach
+Create an array counter to count the occurrences of each value (limited to l-1 to avoid index out of bounds).
+Iterate through the input array and update the counter.
+Initialize ans to 1 (as the first element must be 1).
+Iterate through the counter array, updating ans based on the occurrences and maintaining the conditions.
