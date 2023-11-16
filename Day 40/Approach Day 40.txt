@@ -1,0 +1,13 @@
+Approach
+
+Declare an integer pointer to track the expected decimal value for the next binary string.
+
+Sort the input vector nums in lexicographical order.
+
+Iterate through the sorted binary strings using a for loop:
+
+Convert the current binary string to decimal.
+Check if the decimal value matches the expected value (pointer).
+If they match, increment pointer.
+If not, return the binary representation of the expected value with the appropriate length.
+If no binary string is found during the iteration, return the binary representation of the next expected value.
