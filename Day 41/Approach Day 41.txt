@@ -1,0 +1,18 @@
+Approach
+The approach is based on Dynamic Programming (DP).
+
+First, a check is made to see if zero > one. If this is the case, we call the same function but swap zero and one. This is due to the fact that the type of characters (0 or 1) is interchangeable, and we want to ensure zero <= one for the following steps.
+
+A DP array dp of size high + 1 is then initialized, where dp[i] means how many "good strings" of length i we can build, with dp[0] = 1, as there is one way to build a string of length zero: an empty string.
+
+We then iterate over i from 1 to high:
+
+If i is greater than or equal to one, we set dp[i] to dp[i - zero] + dp[i - one]. This update signifies the ways of building strings of length i by appending a '0' to strings of i-zero lengths and '1' to strings of i-one lengths, while adhering to the maximum consecutive counts.
+
+If i is less than one but greater than or equal to zero, we set dp[i] to dp[i - zero]. This little optimisation was made because after some time i will always be greater than zero and execution will not ever fall into this branch again.
+
+If i is greater than or equal to low, we update our answer ans by adding dp[i]. Strings of length i contribute to our final count of good strings.
+
+Finally, we return ans modulo MOD, as the problem asks for the answer modulo 1e9 + 7.
+
+Note: according to modular arithmetic, (a + b) % c = (a % c + b % c) % c. This property allows us to take the modulus at each step rather than at the end, preventing potential overflow if a + b exceeds the limit of the data type.

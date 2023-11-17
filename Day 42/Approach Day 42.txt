@@ -1,0 +1,25 @@
+Approach 🚀
+Sort the Array:
+
+Sort the input array in ascending order. This step is crucial for pairing the smallest elements with the largest ones.
+Initialize Pointers:
+
+Initialize two pointers, left at the start of the array and right at the end of the array.
+Initialize a Variable:
+
+Create a variable (minMaxPairSum) to keep track of the minimum of the maximum pair sums. Initialize it to the smallest possible integer value.
+Pairing Elements:
+
+Iterate through the array using a while loop until the left pointer is less than the right pointer.
+Calculate Current Pair Sum:
+
+Calculate the sum of the pair of elements pointed to by the left and right pointers.
+Update Minimum of Maximum Pair Sum:
+
+Update minMaxPairSum by taking the maximum value between the current pair sum and the existing minMaxPairSum. This ensures that minMaxPairSum stores the minimum value encountered during the iteration.
+Move Pointers Towards the Center:
+
+Increment the left pointer and decrement the right pointer to move towards the center of the array.
+Return the Result:
+
+After the loop, return the calculated minMaxPairSum as the final result.
