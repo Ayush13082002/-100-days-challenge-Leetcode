@@ -1,0 +1,7 @@
+Approach
+Initialize an array freq to count the frequency of each element in nums.
+Iterate over the elements in reverse order (from the largest to the smallest).
+For each element, update the operations and result.
+Operations are incremented by the frequency of the current element.
+Result is updated by adding the current operations minus the frequency of the current element.
+Return the final result.
