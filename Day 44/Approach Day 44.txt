@@ -1,0 +1,5 @@
+Approach
+Iterate through the garbage array to check if there is Glass (G), Paper (P), or Metal (M) garbage in the city.
+Calculate the initial time ans based on travel times between houses and the length of each garbage assortment.
+Iterate backward through the houses and subtract travel times if a type of garbage is not present in that house.
+Return the final value of ans.
