@@ -1,0 +1,24 @@
+Approach
+Initialization:Initialization:Initialization:
+
+Initialize a variable count to keep track of the total number of elements in the result array.
+Create an ArrayList of ArrayLists called lists to store the elements diagonally.
+TraversingtheMatrixDiagonally:Traversing the Matrix Diagonally:TraversingtheMatrixDiagonally:
+
+Use two nested loops to traverse each element in the matrix (nums).
+For each element at position (i, j), calculate the diagonal index idx by adding i and j.
+If the size of lists is less than idx + 1, it means we are encountering a new diagonal, so add a new ArrayList to lists.
+Add the current element to the corresponding diagonal ArrayList in lists.
+Increment the count to keep track of the total number of elements.
+FlatteningDiagonalListstoResultArray:Flattening Diagonal Lists to Result Array:FlatteningDiagonalListstoResultArray:
+
+Create an array res of size count to store the final result.
+Initialize an index idx to keep track of the position in the result array.
+FlattenDiagonalsinReverseOrder:Flatten Diagonals in Reverse Order:FlattenDiagonalsinReverseOrder:
+
+Iterate over each diagonal ArrayList in lists.
+For each diagonal, iterate in reverse order and add the elements to the result array (res).
+Increment the index idx for each added element.
+ReturnResultArray:Return Result Array:ReturnResultArray:
+
+Return the final result array res.
