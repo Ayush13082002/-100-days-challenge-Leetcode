@@ -1,0 +1,11 @@
+Approach
+For each query, iterate through the given subarray [l[i], r[i]] to find the maximum (max) and minimum (min) values.
+Calculate the length of the subarray: len = r[i] - l[i] + 1.
+Check if the difference between max and min is divisible by len - 1. If not, return false.
+If the difference is zero, return true because any repeated number satisfies the arithmetic sequence property.
+Initialize an array visited to keep track of visited positions.
+Iterate through the subarray again:
+Calculate the position of the current element in the virtual rearranged sequence using (val - min) / diff.
+If the position is already visited, return false (indicating repetition).
+Mark the position as visited.
+If the loop completes, return true.
