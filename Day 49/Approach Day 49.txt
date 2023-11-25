@@ -1,0 +1,10 @@
+Approach
+First, calculate the total sum of the array. This sum will be used to compute the right part of the absolute differences.
+Initialize two pointers, left and right, pointing to the start and end of the array.
+Iterate through the array, and for each element nums[i], calculate the absolute difference sum by considering the left and right parts.
+left represents the sum of elements to the left of nums[i].
+right represents the sum of elements to the right of nums[i].
+The absolute difference sum for nums[i] is calculated as n * i - left + right - n * (nums.length - i - 1).
+Update the left pointer by adding the current element to it.
+Update the right pointer by subtracting the current element from it.
+Store the result in the output array r.
