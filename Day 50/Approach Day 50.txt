@@ -1,0 +1,9 @@
+Approach
+Iterate through the matrix starting from the second row (i = 1).
+For each cell matrix[i][j]:
+If matrix[i][j] is 1, update it to store the height of consecutive 1s ending at this cell by adding the height of the previous row's corresponding cell (matrix[i - 1][j]).
+After preprocessing, for each row, sort the row in non-decreasing order.
+For each cell in the sorted row, calculate the area of the submatrix that ends at this cell, considering the consecutive 1s.
+The area is given by height * width, where height is the height of consecutive 1s ending at this cell, and width is the position of the cell in the sorted row.
+Update the maximum area accordingly.
+Return the maximum area as the result.
