@@ -1,0 +1,7 @@
+Approach
+Create a 2D array MOVES to represent the possible moves for each digit on the phone pad.
+Use a recursive function knightDialer to calculate the count of distinct phone numbers.
+Use a cache (cache array) to store previously computed results for optimization.
+If remaining is 1, return the length of nextNumbers, indicating that the knight can be placed on any of the available numbers.
+Otherwise, iterate through each number in nextNumbers and recursively calculate the count for the remaining moves (remaining - 1) using the possible moves for the current number.
+Update the cache with the calculated result and return the total count.
