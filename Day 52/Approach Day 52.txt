@@ -1,0 +1,7 @@
+Approach
+Initialize variables to keep track of chairs, result, and iterate through the corridor.
+When a seat ('S') is encountered, count it, skip any plants ('P') until the next seat is found, and count that seat as well.
+After identifying adjacent pairs of seats, count the divisions between them and consider each plant as an additional division.
+If there are extra divisions (more than one) and more characters in the corridor, update the result accordingly.
+Repeat the process until the end of the corridor is reached.
+Check if there are chairs and an even number of chairs, then return the final result; otherwise, return 0.
