@@ -1,0 +1,7 @@
+Approach
+Initialize a variable setBitCount to 0, which will store the count of set bits.
+Use a while loop to iterate until the given integer n becomes 0.
+Inside the loop, perform the operation n &= (n - 1). This operation clears the rightmost set bit in n.
+Increment the setBitCount by 1.
+Continue the loop until all set bits in n are cleared.
+Return the final value of setBitCount.
