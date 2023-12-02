@@ -1,0 +1,6 @@
+Approach
+Initialize an array counts to store the count of each character in chars.
+Iterate through each character in chars and update the counts.
+For each string in words, check if it can be formed using the counts of characters in chars.
+If a string can be formed, add its length to the result.
+Return the final result.
