@@ -1,0 +1,4 @@
+Approach
+We define a helper function toTime that calculates the time to move from one point to another. The time is the maximum of the absolute differences in x and y coordinates.
+We iterate through the points, starting from the second point (index 1), and accumulate the time using the toTime function.
+The final accumulated time is the answer.
