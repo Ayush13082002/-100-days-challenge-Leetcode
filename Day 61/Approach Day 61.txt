@@ -1,0 +1,5 @@
+Approach
+Iterate through the string from right to left.
+If the last digit is odd, return the entire string as it is already the largest odd number.
+If the last digit is even, keep moving left until an odd digit is found.
+Return the substring from the beginning of the string to the index where the first odd digit is encountered.
