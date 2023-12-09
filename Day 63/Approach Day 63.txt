@@ -1,0 +1,4 @@
+Approach
+We use a recursive helper function to perform the inorder traversal.
+In the helper function, we traverse the left subtree, add the root value to the result, and then traverse the right subtree.
+The base case ensures that the traversal stops when we reach a null node.
