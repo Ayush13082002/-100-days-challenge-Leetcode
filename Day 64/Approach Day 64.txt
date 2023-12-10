@@ -1,0 +1,5 @@
+Approach
+Determine the number of rows (row) and columns (col) in the original matrix.
+Create a new matrix arr with dimensions col x row.
+Iterate through each element of the original matrix, assigning it to the corresponding position in the transposed matrix.
+Return the transposed matrix.
