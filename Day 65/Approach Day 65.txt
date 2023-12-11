@@ -1,0 +1,10 @@
+Approach
+Initialize variables size to store the size of the array, qtr to store 25% of the size, cnt to keep track of consecutive occurrences, and p to store the current integer being checked.
+Iterate through the array starting from index 1.
+Compare the current integer arr[i] with the previous integer p.
+If they are equal, increment the count cnt.
+If they are not equal, reset the count cnt to 1.
+Check if the count cnt is greater than 25% of the array size qtr.
+If true, return the current integer arr[i] as it occurs more than 25% of the time.
+If false, update the previous integer p to the current integer arr[i].
+If no integer is found during the iteration, return the last integer p as the answer.
