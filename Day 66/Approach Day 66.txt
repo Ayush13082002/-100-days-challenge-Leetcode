@@ -1,0 +1,4 @@
+Approach
+Initialize two variables, max1 and max2, to store the two maximum elements. Set them to Integer.MIN_VALUE.
+Iterate through the array, updating max1 and max2 accordingly.
+Calculate and return the maximum product using the formula (max1 - 1) * (max2 - 1).
