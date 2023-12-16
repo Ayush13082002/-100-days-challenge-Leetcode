@@ -1,0 +1,6 @@
+Approach
+Check if the lengths of both strings are equal. If not, they cannot be anagrams, so return false.
+Initialize an array map of size 26 to store the frequency of each character in the alphabet (assuming only lowercase English letters).
+Iterate through both strings simultaneously. For each character, increment its count in map for the first string and decrement for the second string.
+After the iteration, check if all counts in the map are zero. If yes, then the strings are anagrams; otherwise, they are not.
+The provided solution contains some additional conditions related to the lengths of the strings and the characters at certain positions. These conditions seem to be specific to certain cases and might not be needed for a general solution.
