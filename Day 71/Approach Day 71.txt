@@ -1,0 +1,6 @@
+Approach
+Create a class Info to represent a combination of food, cuisine, and rating.
+Use two maps: foodMap to store food information, and cuisineMap to store cuisine-specific PriorityQueues of Info objects.
+In the constructor, populate these maps based on the input arrays.
+For changeRating method, update the rating in foodMap and remove the corresponding Info object from the cuisineMap PriorityQueue.
+For highestRated method, continuously remove Info objects with empty food names from the PriorityQueue until a valid food name is found.
