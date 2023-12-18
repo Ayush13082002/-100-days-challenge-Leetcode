@@ -1,0 +1,5 @@
+Approach
+Initialize variables to keep track of the largest (largest) and second-largest (secondLargest) values, as well as the smallest (smallest) and second-smallest (secondSmallest) values.
+Iterate through the array, updating the extreme values based on the current element.
+Calculate the product difference using the formula: (largest * secondLargest) - (smallest * secondSmallest).
+Return the calculated product difference.
