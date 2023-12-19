@@ -1,0 +1,6 @@
+Approach
+Iterate through each cell in the image matrix.
+For each cell, calculate the sum of the values of the cell and its eight surrounding cells.
+Count the number of valid cells included in the sum.
+Set the value of the corresponding cell in the result matrix as the floor of the sum divided by the count.
+Return the result matrix.
