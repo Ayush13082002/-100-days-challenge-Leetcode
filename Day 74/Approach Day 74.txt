@@ -1,0 +1,7 @@
+Approach
+Initialize a variable ans to Integer.MAX_VALUE to keep track of the minimum sum of chocolate prices.
+Iterate through each pair of chocolates using two nested loops.
+For each pair (i, j), calculate the sum arr[i] + arr[j].
+Update ans with the minimum of its current value and the calculated sum.
+After the loops, calculate the leftover amount fin as key - ans.
+If fin is non-negative, return fin; otherwise, return the initial money key.
