@@ -1,0 +1,7 @@
+Approach
+Sort the points based on their x-coordinates.
+Initialize a variable max_width to store the maximum width.
+Iterate through the sorted points starting from index 1.
+For each pair of consecutive points, calculate the width by subtracting the x-coordinate of the previous point from the x-coordinate of the current point.
+Update max_width with the maximum of its current value and the calculated width.
+After the iteration, max_width will contain the result.
