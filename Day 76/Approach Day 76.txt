@@ -1,0 +1,9 @@
+Approach
+Initialize Result: Sets result to 0 to store the maximum score found so far.
+Iterate Through Splitting Points: Loops through each possible index i (except the last character) to consider splitting the string at that point.
+Calculate Score for Current Split:
+Sets currentScore to 0 for the current split.
+Iterates through the substring from the beginning up to index i (inclusive), counting the '0's and adding them to currentScore.
+Iterates through the substring from index i + 1 to the end, counting the '1's and adding them to currentScore.
+Update Maximum Score: Updates result with the maximum of result and currentScore, ensuring the highest score is tracked.
+Return Maximum Score: After checking all possible splits, returns the result variable, holding the best possible score.
