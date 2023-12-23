@@ -1,0 +1,9 @@
+Approach
+Create a map moves to map the characters 'N', 'S', 'E', 'W' to their respective coordinate changes.
+Initialize a set visited to store the visited locations. Add the starting location (0, 0) to the set.
+Traverse the path character by character:
+Update the current position based on the move.
+Create a pair of the current position.
+Check if the pair is already in the visited set. If yes, return true as the path crosses itself.
+Otherwise, add the pair to the visited set.
+If the traversal completes without finding any crossing, return false.
