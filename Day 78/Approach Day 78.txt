@@ -1,0 +1,4 @@
+Approach
+Initialize two counts: count1 for starting with '0' and count2 for starting with '1'.
+Use the count function to count the number of operations needed for each starting character. This function takes the string s and the previous character c_pre and returns the count of operations needed.
+Compare count1 and count2 and return the minimum of the two.
