@@ -1,0 +1,4 @@
+Approach
+Base Cases:
+If the number of jobs is less than the number of days (len(jobDifficulty) < d), it's impossible to create a valid schedule. Return -1.
+If the sum of job difficulties is zero (sum(jobDifficulty) == 0), all jobs have zero difficulty, and the minimum difficulty is 0.
