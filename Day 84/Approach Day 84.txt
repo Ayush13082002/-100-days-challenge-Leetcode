@@ -1,0 +1,8 @@
+Approach
+First, we check if the length of the array is 1. If it is, all strings are already equal, so we return true.
+Calculate the total character count across all strings.
+If the total character count is not divisible by the number of strings, it is impossible to make them equal, so return false.
+Initialize an array myMap to count the occurrences of each character.
+Traverse all strings and update the character count in myMap.
+Check if each character count is divisible evenly by the number of strings. If any character count is not divisible, return false.
+If all checks pass, return true.
