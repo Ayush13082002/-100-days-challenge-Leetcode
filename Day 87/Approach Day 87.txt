@@ -1,0 +1,18 @@
+Approach
+1. Counting Frequencies:
+
+The code uses a hashmap (unordered_map in C++) to store the frequency of each number in the input vector nums.
+2. Iterative Matrix Construction:
+
+It iterates through the hashmap repeatedly until it's empty.
+Each iteration constructs a new row of the resulting matrix.
+3. Row Filling:
+
+Within each iteration, it creates a temporary vector to represent the current row.
+It adds each key (number) from the hashmap to the row, decrementing its count.
+4. Key Removal:
+
+If a key's count becomes zero, it's removed from the hashmap, ensuring each number appears only once in the final matrix.
+5. Matrix Assembly:
+
+The temporary row is appended to the ans vector, which stores the complete matrix.
