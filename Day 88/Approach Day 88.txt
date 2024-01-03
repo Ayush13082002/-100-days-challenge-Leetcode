@@ -1,0 +1,5 @@
+Approach
+Iterate through each row of the bank and calculate the number of security devices in that row (curRowCount).
+For each non-empty row, calculate the number of laser beams that can be formed between devices in the current row and devices in the previous row (prevRowCount).
+Update the total count of laser beams.
+Return the total count.
