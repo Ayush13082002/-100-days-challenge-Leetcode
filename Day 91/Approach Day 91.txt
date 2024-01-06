@@ -1,0 +1,16 @@
+Approach
+Job Class:
+A private inner class Job is defined to represent each job with its start time, end time, and profit.
+Input Processing:
+The input arrays startTime, endTime, and profit are used to create a list of Job objects.
+Sorting:
+The list of jobs is sorted based on their end times in ascending order. This is crucial for the dynamic programming approach.
+Dynamic Programming with TreeMap:
+A TreeMap (map) is used to keep track of the maximum profit achievable until a particular time.
+Iterate through the sorted list of jobs.
+For each job, find the maximum profit achievable until its start time by using floorKey on the TreeMap.
+Calculate the maximum profit achievable by either considering or not considering the current job.
+Update the TreeMap with the current job's end time and the corresponding maximum profit.
+Update the overall maximum profit.
+Result:
+The final result is the maximum profit achievable by scheduling the jobs optimally.
