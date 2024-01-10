@@ -1,0 +1,18 @@
+Approach
+1. Recursive Traversal with Height Calculation:
+
+The traverse function recursively explores the tree, searching for the target node with value targetVal.
+It calls the height function to calculate the height of subtrees, which is used to determine the time needed to reach a leaf.
+2. Target Node Tracking and Subtree Height:
+
+When the target node is found, its subtree height is calculated using height and stored in targetSubtreeHeight.
+This represents the time needed to reach a leaf from the target node.
+3. Indirect Path Calculation:
+
+For each non-target node, the function considers the potential indirect path that passes through it and its children.
+It updates maxIndirect with the maximum distance between the current node's children, plus 1 for the current node itself.
+4. Final Result:
+
+The amountOfTime function initializes targetLeafLen (time to reach a leaf from the target node) and maxIndirect (longest indirect path).
+It calls traverse to perform the traversal and calculations.
+It returns the maximum of targetLeafLen and maxIndirect, representing the overall maximum time.
