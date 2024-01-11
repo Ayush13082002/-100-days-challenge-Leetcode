@@ -1,0 +1,8 @@
+Approach
+
+Depth-First Search (DFS):
+Traverse the tree using DFS to explore all nodes.
+Recursion:
+Use a recursive function dfs that returns a pair of integers representing the minimum and maximum values encountered in the subtree rooted at the current node.
+Update Maximum Difference:
+Update the maximum difference m by comparing the differences between the current node's value and the minimum and maximum values in its subtree.
