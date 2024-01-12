@@ -1,0 +1,6 @@
+Approach
+1. Define a helper function count_vowels to count the number of vowels in a given string.
+2. Compute the length of the input string and find the midpoint.
+3. Split the string into two halves: the first half (first_half) and the second half (second_half).
+4. Use the count_vowels function to count the vowels in both halves.
+5. Compare the counts of vowels in both halves. If they are equal, return True; otherwise, return False.
