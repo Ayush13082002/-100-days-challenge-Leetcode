@@ -1,0 +1,6 @@
+Approach
+1. Initialize two arrays count_s and count_t of size 26 to represent the count of each character in the alphabet for both strings s and t.
+2. Iterate through each character in string s and increment the corresponding count in count_s.
+3. Iterate through each character in string t and increment the corresponding count in count_t.
+4. Calculate the absolute differences in counts for each character and sum them up to get the total number of steps.
+5. Return the total number of steps divided by 2 since each step involves changing one character, and we count each change twice.
