@@ -1,0 +1,6 @@
+Approach
+Utilize an array losses to keep track of the number of losses for each player.
+Iterate through the matches array and update the losses array accordingly.
+Create two lists, zeroLoss and oneLoss, to store players with zero and one loss, respectively.
+Populate these lists based on the information in the losses array.
+Return a list containing zeroLoss and oneLoss.
